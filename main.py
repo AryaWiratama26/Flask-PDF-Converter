@@ -14,7 +14,7 @@ def pdf_to_word(filename):
     file_word = os.path.splitext(filename)[0] + '.docx'
     
     cv = Converter(filename)
-    cv.convert(file_word, start=0, end=1000000000000000000000000)  
+    cv.convert(file_word, start=0, end=None)  
     cv.close()
     
     return send_file(file_word, as_attachment=True)
